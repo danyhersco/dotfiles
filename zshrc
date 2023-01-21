@@ -70,3 +70,21 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+export PYTHONPATH="/Users/danyhersco/code/danyhersco/data-context-and-setup:$PYTHONPATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/danyhersco/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/danyhersco/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/danyhersco/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/danyhersco/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+eval "$(direnv hook zsh)"
